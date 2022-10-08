@@ -83,3 +83,4 @@ storage/app/public/productsフォルダ内に
 ショップの画像も表示する場合は、
 storage/app/public/shopsフォルダを作成し
 画像を保存してください。# RENTALMEMBER
+# SHOPMEMBER
