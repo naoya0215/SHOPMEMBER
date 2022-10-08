@@ -68,16 +68,11 @@ DBにダミーデータが入ったか確認してください。
 
 ## 画像について
 
-画像のダミーデータは
-public/imagesフォルダ内に
-sample1.png 〜 sample5.png として
-保存しています。
-
 「　php artisan storage:link 」で
 storageフォルダにリンク後、
 
 storage/app/public/productsフォルダ内に
-保存すると表示されます。
+画像を保存すると表示されます。
 (productsフォルダがない場合は作成してください。)
 
 ショップの画像も表示する場合は、
