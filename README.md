@@ -33,7 +33,7 @@ ADMINPEGEよりログインを行い、自分のSHOPアカウント(ショップ
 git cloneでURLを貼り付けてください。
 gtihub からダウンロードが行えます。
 
-cdで確認をする
+
 「cd member」を実行
 続いてcomposerをインストールする。
 「composer install」を実行

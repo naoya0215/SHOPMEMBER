@@ -1,0 +1,208 @@
+@charset "UTF-8";
+
+/* reset */
+body, h1, h2, h3, h4, h5, h6, p, address,
+ul, ol, li, dl, dt, dd, img, form, table, tr, th, td {
+  margin: 0;
+  padding: 0;
+  border: none;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 100%;
+  text-align: left;
+  list-style-type: none;
+  border-collapse: collapse;
+}
+
+textarea {
+  font-size: 100%;
+  vertical-align: middle;
+}
+
+img {
+  border-style: none;
+  display: block;
+}
+
+hr {
+  display: none;
+}
+
+em {
+  font-style: normal
+}
+
+input {
+  line-height: auto;
+  vertical-align: middle;
+}
+
+strong.more {
+  color: #c30
+}
+
+a {
+  text-decoration: none;
+}
+
+
+body {
+  font-family: 'ヒラギノ角ゴ Pro W3', 'Hiragino Kaku Gothic Pro', 'メイリオ', Meiryo, 'MS Ｐゴシック', sans-serif;
+}
+
+* {
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  -o-box-sizing: border-box;
+  -ms-box-sizing: border-box;
+  box-sizing: border-box;
+}
+
+/*particles*/
+
+body {
+    margin: 0;
+    padding: 0;
+    height: auto;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+.bg {
+    background: linear-gradient(-135deg, #f0e68c, #7cfc00);
+  }
+
+/*header*/
+.header_wrapper {
+  display: flex;
+  justify-content: space-around;
+  background: linear-gradient(to right, #fff, #f0e68c);
+}
+
+.header_wrapper img {
+  margin-left: 160px;
+}
+
+header img {
+  height: 100px;
+  width: 100px;
+}
+
+.header_login {
+  display: flex;
+  justify-content: space-around;
+  width: 30%;
+  padding-top: 35px;
+}
+
+.header_login p {
+  font-size: 18px;
+  color: #696969;
+}
+
+.header_nav {
+  display: flex;
+  justify-content: space-around;
+  height: 45px;
+  padding-top: 20px;
+  padding-left: 40px;
+  position: absolute;
+  top: 100px;
+  width: 100%;
+  background:rgba(0, 0, 0, 0)
+}
+
+.header_nav li {
+  font-size: 18px;
+  color: #696969;
+}
+
+/*main*/
+
+.top_image img {
+  object-fit: cover;
+  width: 100%;
+  height: 900px;
+}
+
+.img {
+  position: absolute;
+  top: 170px;
+  left: 0;
+  opacity: 0;
+  transition: all 0.8s;
+}
+
+.current-img {
+  opacity: 1;
+  z-index: 20;
+}
+
+/*footer*/
+.footer_wrapper {
+  margin-top: 230px;
+  display: flex;
+  justify-content: space-around;
+  color: #fff;
+  background-color: #fffacd;
+  height: 300px;
+}
+
+.footer_box {
+  padding-top: 100px;
+}
+
+.footer_box li {
+  color: #696969;
+}
+
+/*いいね*/
+
+/* ---------------------------- */
+/* --- ハートアニメーション --- */
+/* ---------------------------- */
+@keyframes heartAnimation {
+  0% {
+    /* アイコンサイズをもとのより小さくする */
+    transform: scale(0.5);
+  }
+  10% {
+    transform: scale(0.7);
+  }
+  30% {
+    transform: scale(0.9);
+  }
+  50% {
+    transform: scale(1.2);
+  }
+  80% {
+    transform: scale(1.5);
+  }
+  100% {
+    /* もとのサイズに戻す */
+    transform: scale(1.0);
+  }
+}
+
+.LikesIcon-fa-heart{
+  font-size: 80px;
+}
+.LikesIcon-fa-heart.heart{
+  /* heartAnimationアニメーションを200ミリ秒かけて実行する */
+  animation: heartAnimation .2s;
+  /* アイコン色を黒から赤へ変更する */
+  color: #e2264d;
+}
+
+.LikesIcon-fa-heart{
+  font-size: 80px;
+}
+.LikesIcon-fa-heart.heart{
+  /* heartAnimationアニメーションを200ミリ秒かけて実行する */
+  animation: heartAnimation .2s;
+  /* アイコン色を黒から赤へ変更する */
+  color: #e2264d;
+}
