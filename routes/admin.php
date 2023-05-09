@@ -8,7 +8,7 @@ use App\Http\Controllers\Admin\Auth\NewPasswordController;
 use App\Http\Controllers\Admin\Auth\PasswordResetLinkController;
 use App\Http\Controllers\Admin\Auth\RegisteredUserController;
 use App\Http\Controllers\Admin\Auth\VerifyEmailController;
-use App\Http\Controllers\Admin\OwnersController;
+use App\Http\Controllers\Admin\BoardController;
 use Illuminate\Support\Facades\Route;
 
 /*
@@ -28,23 +28,6 @@ use Illuminate\Support\Facades\Route;
 
 Route::get('admin.welcome', function () {
     return view('admin.welcome');
-});
-
-
-Route::get('main.manner', function () {
-    return view('main.manner');
-});
-
-
-
-Route::resource('owners', OwnersController::class)
-->middleware('auth:admin')->except(['show']);
-
-
-Route::prefix('expired-owners')->
-    middleware('auth:admin')->group(function(){
-        Route::get('index', [OwnersController::class, 'expiredOwnerIndex'])->name('expired-owners.index');
-        Route::post('destroy/{owner}', [OwnersController::class, 'expiredOwnerDestroy'])->name('expired-owners.destroy');
 });
 
 
@@ -105,3 +88,13 @@ Route::post('/confirm-password', [ConfirmablePasswordController::class, 'store']
 Route::post('/logout', [AuthenticatedSessionController::class, 'destroy'])
                 ->middleware('auth:admin')
                 ->name('logout');
+
+
+Route::middleware('auth:admin')->group(function(){
+    Route::get('/board', [BoardController::class, 'index'])->name('board.index');
+    Route::get('create/{board}', [BoardController::class, 'create'])->name('board.create');
+    Route::post('store/{board}', [BoardController::class, 'store'])->name('board.store');
+    Route::get('edit/{board}', [BoardController::class, 'edit'])->name('board.edit');
+    Route::post('update/{board}', [BoardController::class, 'update'])->name('board.update');
+});
+

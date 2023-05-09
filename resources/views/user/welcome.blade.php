@@ -63,9 +63,6 @@
                         <div class="px-6 py-4">
                             <a href="{{ route('admin.login') }}" class="text-lg text-gray-700 dark:text-gray-500 underline">ADMINPEGE</a>
                         </div>
-                        <div class="px-6 py-4">
-                            <a href="{{ route('owner.login') }}" class="text-lg text-gray-700 dark:text-gray-500 underline">SHOPPEGE</a>
-                        </div>
                     </div>
                 </div>
             </div>
